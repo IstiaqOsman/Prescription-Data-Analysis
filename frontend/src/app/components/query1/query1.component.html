@@ -1,0 +1,49 @@
+<!-- <div *ngFor="let data of data_all" >
+    {{data.PCO_NAME}} - {{data.TOTAL_QUANTITY}} - {{data.MONTH}}
+</div> -->
+
+
+<style>
+    .xyz 
+    {
+    
+    border: 1px solid #0f0d0d;
+    }
+    .xyz tr{
+      border: 1px solid #0f0d0d;
+    }
+    .xyz td{
+      border: 1px solid #0f0d0d;
+    }
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style> 
+  
+  <html>
+    <body>
+      <h2>  </h2>
+      
+      <table class="xyz center">
+        <tr>
+          <td> Month</td>
+          <td> Net Ingredient Cost</td>
+          <td> Total Sales </td>
+        </tr>
+        
+        <tr *ngFor = "let d of data_all">
+          <td> {{d.Month}} </td>
+          <td> {{d.NIC}} </td>
+          <td> {{d.total_sales}} </td>
+        </tr>
+      </table>
+      <div class="chart-wrapper">
+        <canvas baseChart [type] = "'line'"
+                          [datasets] = "chartData"
+                          [options] = "chartOptions"
+                          [labels] = "chartLabels">
+        </canvas>
+      </div>
+    </body>
+  </html>
