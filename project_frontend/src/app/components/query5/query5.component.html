@@ -1,0 +1,28 @@
+<div class="justify-content-center">
+  <h2>
+    <small class="text-muted"> Top 10 most visited Service Centres </small>
+  </h2>
+</div>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Service Center</th>
+      <th>Patients Visited</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of data_all">
+      <td>{{data.Service_Name}}</td>
+      <td>{{data.Count}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions">
+  </canvas>
+</div>

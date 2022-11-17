@@ -1,0 +1,18 @@
+<div class="justify-content-center">
+  <h2>
+    <small class="text-muted"></small>
+  </h2>
+</div>
+<div>
+  <li *ngFor="let data of data_all" >
+      {{data.PCO}} - {{data.Total_Sales}}
+  </li>
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [type]="'line'"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions">
+  </canvas>
+</div>

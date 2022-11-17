@@ -1,0 +1,26 @@
+<div class="justify-content-center">
+  <h2>
+    <small class="text-muted">In each month top 3 most visited department</small>
+  </h2>
+</div>
+  <div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Month</th>
+        <th>BNF CHAPTER</th>
+        <th>NO. OF VISITS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of data_all">
+        <td>{{data.MONTH}}</td>
+        <td>{{data.BNF_CHAPTER}}</td>
+        <td>{{data.COUNT}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<div id = "divChart">
+  <canvas id="myChart"></canvas>
+</div>

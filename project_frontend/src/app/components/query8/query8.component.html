@@ -1,0 +1,22 @@
+<div class="justify-content-center">
+  <h2>
+    Query 8:
+    <small class="text-muted">Worst quarter for items</small>
+  </h2>
+</div>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Item Name</th>
+      <th>Worst Quarter</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of data_all">
+      <td>{{data.Item}}</td>
+      <td>{{data.Quarter}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

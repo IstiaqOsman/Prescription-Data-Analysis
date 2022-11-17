@@ -1,0 +1,18 @@
+<div class="justify-content-center">
+  <h2>
+    <small class="text-muted">Monthly average sales of 2020, 2021, 2022 combined</small>
+  </h2>
+</div>
+<div>
+  <li *ngFor="let data of data_all" >
+  {{data.Month}} - {{data.Total_Sales}}
+  </li>
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [type]="'line'"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions">
+  </canvas>
+</div>

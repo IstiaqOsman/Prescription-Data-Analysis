@@ -1,0 +1,17 @@
+<div class="justify-content-center">
+  <h2>
+    <small class="text-muted">Top 20 most prescribed ingredients or appliances </small>
+  </h2>
+<div>
+  <li *ngFor="let data of data_all" >
+  {{data.Ingredient_Appliance}} - {{data.Total_Quantity}}
+  </li>
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [legend]="true"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions">
+  </canvas>
+</div>

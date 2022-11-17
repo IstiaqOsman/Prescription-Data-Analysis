@@ -1,0 +1,17 @@
+<p>query12 works!</p>
+<div class="justify-content-center">
+  <h2>
+    <small class="text-muted"> Monthly top 3 visited department</small>
+  </h2>
+</div>
+
+
+<div>
+  <li *ngFor="let data of data_all" >
+    MONTH {{data.MONTH}}: BNF_CHAPTER- {{data.BNF_CHAPTER}}- Visit Count {{data.Count}} -- SALES {{data.Sales}}
+  </li>
+</div>
+
+<div id = "divChart">
+  <canvas id="myChart"></canvas>
+</div>

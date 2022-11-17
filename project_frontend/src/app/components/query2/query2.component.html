@@ -1,0 +1,18 @@
+<div class="justify-content-center">
+  <h2>
+    <small class="text-muted">Top 20 most sold ingredients or appliances</small>
+  </h2>
+</div>
+<div>
+  <li *ngFor="let data of data_all">
+      {{data.Ingredient_Appliance}} - {{data.Total_Sales}}
+  </li>
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [type]="'line'"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions">
+  </canvas>
+</div>

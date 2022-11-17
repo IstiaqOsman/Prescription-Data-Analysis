@@ -1,0 +1,33 @@
+<div class="justify-content-center">
+  <h2>
+    Query 10:
+    <small class="text-muted">Monthly Average Sales of Stores</small>
+  </h2>
+</div>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Store Key</th>
+      <th>Months</th>
+      <th>Average Sales (taka)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of data_all">
+      <td>{{data.Store}}</td>
+      <td>{{data.Month}}</td>
+      <td>{{data.Average_Sales}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [type]="'line'"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions">
+  </canvas>
+</div>
+
